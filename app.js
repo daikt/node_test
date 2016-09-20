@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var boards = require('./routes/boards');
 var register = require('./routes/register');
 var login = require('./routes/login');
+var setUser = require('./routes/setUser');
 
 var app = express();
 
@@ -31,9 +32,9 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use('/', routes);
+app.use('/', setUser, routes);
 app.use('/users', users);
-app.use('/boards', boards);
+app.use('/boards', setUser, boards);
 app.use('/register', register);
 app.use('/login', login);
 
