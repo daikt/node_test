@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <title><%= title %></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <link rel='stylesheet' href='/stylesheets/style.css'>
-  </head>
-  <body>
-    <div class="wrapper">
+      <% layout('layout') %>
       <p class="main-title"><%= title %></p>
       <form action="/register" method="post" class="board-form">
         <span class="label">ユーザ名</span><input type="text" name="user_name" class="input" required><br>
@@ -23,6 +13,3 @@
         <p class="error"><%= emailExists %></p>
       <% } %>
       <a href="/" class="btn">トップへもどる</a>
-    </div>
-  </body>
-</html>
