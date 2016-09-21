@@ -16,6 +16,8 @@
     "socket.io": "~1.4.8",
     "moment": "~2.14.1",
     "mysql": "~2.11.1",
-    "express-session": "~1.14.1"
+    "express-session": "~1.14.1",
+    "multer": "~1.2.0",
+    "ejs-locals": "~1.0.2"
   }
 }
